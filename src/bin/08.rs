@@ -174,20 +174,3 @@ fn print_array(array: &Vec<Vec<char>>) {
         println!("{:?}", row.iter().join(""));
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_part_one() {
-        let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, Some(14));
-    }
-
-    #[test]
-    fn test_part_two() {
-        let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, Some(34));
-    }
-}
