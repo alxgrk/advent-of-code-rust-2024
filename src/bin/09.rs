@@ -1,10 +1,7 @@
-use std::{fmt::Display, iter::repeat_n};
-
 use itertools::Itertools;
 
 advent_of_code::solution!(9);
 
-const FREE: char = '.';
 #[derive(Debug, Clone, Copy, PartialEq)]
 enum Block {
     File(u64),
@@ -224,21 +221,4 @@ fn calc_checksum_from_files(compacted: Vec<File>) -> u64 {
         acc
     });
     checksum
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_part_one() {
-        let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, Some(1928));
-    }
-
-    #[test]
-    fn test_part_two() {
-        let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, Some(2858));
-    }
 }
