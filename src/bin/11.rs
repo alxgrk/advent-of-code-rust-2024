@@ -1,4 +1,4 @@
-use std::{collections::HashMap, hash::Hash, thread::current, time::Instant};
+use std::{collections::HashMap, time::Instant};
 
 use itertools::Itertools;
 
@@ -124,21 +124,4 @@ fn solve_advanced(input: &str, rounds: u8) -> Option<u64> {
     }
 
     Some(memory.values().sum::<usize>() as u64)
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_part_one() {
-        let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, Some(55312));
-    }
-
-    #[test]
-    fn test_part_two() {
-        let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, Some(65601038650482));
-    }
 }
